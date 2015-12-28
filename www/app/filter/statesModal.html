@@ -1,0 +1,22 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Estados</h1>
+        <!--<div class="buttons">-->
+            <!--<button class="button" ng-click="closeStates()">OK</button>-->
+        <!--</div>-->
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="state in states">
+                <label class="item-radio">
+                    <input type="radio" ng-value="state.id" ng-model="filterArgs.state"
+                           ng-click="closeStates()">
+                    <div>
+                        {{state.name}}
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

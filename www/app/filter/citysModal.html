@@ -1,0 +1,24 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Cidades</h1>
+        <!--<div class="buttons">-->
+            <!--<button class="button" ng-click="closeCitys()">OK</button>-->
+        <!--</div>-->
+    </ion-header-bar>
+    <ion-content>
+
+        <ion-list>
+            <ion-item ng-repeat="city in citys">
+                <label class="item-radio">
+                    <input type="radio" ng-value="city" ng-model="filterArgs.city"
+                           ng-click="closeCitys()">
+                    <div>
+                        {{city.name}}
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+            </ion-item>
+        </ion-list>
+    
+    </ion-content>
+</ion-modal-view>

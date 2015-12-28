@@ -1,0 +1,27 @@
+<ion-view view-title="EncontreMed"  ng-controller="entitiesListCtrl">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon ion-search button-positive" 
+                ng-click="showFilterBar()">
+        </button>
+    </ion-nav-buttons>
+
+        <ion-content direction="y" scrollbar-y="false">
+        
+            <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
+            </ion-refresher>
+                <div class="list">
+                    <a class="item item-avatar item-icon-right entity-list-item"  ng- repeat="entity in entities " href="#/app/entity/{{entity.id}}">
+                        <img ng-src="{{entity.photo}}">
+                        <div class="entity-list-item-name">
+                            <em class="">{{entity.name}}</em>
+                        </div>
+                        <p class="entity-list-item-status" ng-if="entity.status1 !== ''">{{entity.status1}}</p>
+                        <p class="icon entity-list-item-distance">{{entity.distance+"km"}}</p>
+                        <i class="icon"><img class="entity-list-item-arrow-right" src="img/SetaDirCell@2x.png"></i>
+                    </a>
+                </div>
+            <div ng-if="items !== undefined && !items.length" class="no-results">
+                <p>Sem Resultados</p>
+            </div>
+        </ion-content>
+</ion-view>

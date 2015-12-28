@@ -1,0 +1,30 @@
+<ion-view class="filter-background">
+<ion-nav-title>{{title}}</ion-nav-title>
+    <ion-content>
+        <div class="list filter-list">
+            <label class="item filter-list-item" ng-click="openSpecialty()">
+                Especialidade
+                <span class="item-note-gb">{{labels.specialtyLabel}}</span>
+            </label>
+            <label class="item filter-list-item" ng-if="has_health_insurance"ng-click="openAttendances()">
+                Atendimento
+                <span class="item-note-gb">{{labels.attendanceLabel}}</span>
+            </label>
+            <label ng-if="filterArgs.attendance == 2" class="item filter-list-item" ng-click="openHealthInsurance()">
+                Plano de Saúde
+                <span class="item-note-gb">{{labels.healthInsuranceLabel}}</span>
+            </label>
+            <label class="item filter-list-item" ng-click="openStates()">
+                Estado
+                <span class="item-note-gb">{{labels.stateLabel}}</span>
+            </label>
+            <label class="item filter-list-item" ng-hide="!filterArgs.state" ng-click="openCitys()" ng-click="openCitys()">
+                Cidade
+                <span class="item-note-gb">{{labels.cityLabel}}</span>
+            </label>
+        </div>
+        <div class="padding">
+            <button class="button button-block filter-done-button" ng-disabled="!labels.cityLabel || !filterArgs.attendance || !filterArgs.healthInsurance || !filterArgs.specialty" ng-click="filter()">Buscar</button>
+        </div>
+    </ion-content>
+</ion-view>

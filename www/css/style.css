@@ -1,0 +1,302 @@
+/* Empty. Add your own CSS if you like */
+
+.centered {
+    text-align: center;
+}
+
+#map_canvas {
+    height: 250px;
+    width: 100%;
+}
+
+.angular-google-map-container {
+    height: 250px;
+    width: 100%;
+}
+
+.item-note-gb {
+    float: right;
+    font-size: 14px;
+}
+
+.custom-icon {
+    color: #FFC900 !important;
+}
+
+.bar .button.back-button {
+    color: #fff;
+}
+
+.no-favorites {
+    color: grey;
+    font-size: 16px;
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-share-button {
+    color: #fff !important;
+}
+
+/*
+Override
+Sobrescrevendo item para quebrar linha automaticamente
+*/
+
+.item {
+    overflow: inherit;
+    text-overflow: inherit;
+    white-space: normal;
+}
+
+
+/*
+App Design classes
+*/
+
+.bar-dwguiabase {
+    background: #59BFE2;
+    color: #fff;
+}
+
+.main-background {
+    background-color: #e8e8e8;
+}
+
+.category-list-item {
+    background-color: #F7F7F7 !important;
+}
+
+.icon .category-list-item-arrow-right {
+    width: 10px;
+}
+
+.category-list-item-name {
+    line-height: 2.2777;
+    font-size: 18px;
+    color: grey;
+}
+
+.filter-background {
+    background-color: #e8e8e8;
+}
+
+.filter-done-button {
+    background-color: #7CB5DC !important;
+    border-radius: 25px !important;
+    color: #fff !important;
+}
+.filter-done-button-red{
+    background-color: rgba(228, 32, 18, 0.44) !important;
+    border-radius: 25px !important;
+    color: #fff !important;
+}
+.filter-list {
+    margin: 20px 10px!important;
+}
+
+.filter-list-item {
+    background-color: #F7F7F7!important;
+    color: grey!important;
+}
+
+.sidemenu-background {
+    background-image: url("img/BackgroundAzul@2x.png");
+}
+
+.sidemenu-padding-top {
+    padding-top: 25px;
+}
+
+.sidemenu-item {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 17px;
+}
+
+.sidemenu-item .item-content {
+    background: transparent;
+}
+
+.sidemenu-item-img {
+    float: left;
+    width: 40px;
+    text-align: center;
+}
+
+.sidemenu-item-title {
+    line-height: 2;
+    margin-left: 23%;
+}
+
+.entity-list-search {
+    background-color: #5D91BC !important;
+    padding: 15px;
+}
+
+.entity-list-search-input {
+    border-radius: 20px;
+    height: 30px;
+}
+
+.entity-list-item {
+    background-color: #F7F7F7 !important;
+}
+
+.icon .entity-list-item-arrow-right {
+    width: 10px;
+}
+
+.entity-list-item-name {
+    font-size: 18px;
+    color: grey;
+}
+
+.entity-list-item-status {
+    font-size: 12px !important;
+    color: #c0c0c0 !important;
+}
+
+.entity-list-item-distance {
+    font-size: 13px !important;
+    margin-right: 15px;
+}
+
+.entity-details-background {
+    background-color: #E3E9E9;
+}
+
+.entity-details-address {
+    background-color: #F7F7F7;
+}
+
+.entity-details-button-navigate {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.entity-details-button-navigate-image {
+    width: 25px;
+    vertical-align: middle;
+}
+
+.entity-details-button-show-more-image {
+    vertical-align: middle;
+    width: 30px;
+}
+
+.entity-details-show-more {
+    color: #3B80B1;
+    display: block;
+}
+
+.entity-details-address-pin {
+    width: 25px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.entity-details-address-name {
+    color: grey;
+    font-size: 12px;
+    display: inline;
+}
+
+.entity-details-icons {
+    width: 25px;
+}
+
+.entity-details-font {
+    color: grey;
+    font-size: 14px;
+    display: inline;
+    line-height: 1.8;
+}
+
+.entity-details-icon-blue-phone {
+    width: 25px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.entity-details-button-phone {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.entity-details-favorite-button {
+    background-color: #7CB5DC !important;
+    border-radius: 25px !important;
+    color: #fff !important;
+    position: relative !important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.item-contact-input {
+    background-color: #C4CBCE !important;
+    border-radius: 25px;
+}
+
+.item-contact-input-textarea {
+    background-color: #C4CBCE !important;
+    margin-right: 15px;
+    color: white;
+}
+
+.item-contact-input-text {
+    color: white !important;
+}
+
+.contact-text {
+    border: 0;
+    color: grey;
+}
+
+#contactName::-webkit-input-placeholder,
+#contactEmail::-webkit-input-placeholder,
+#contactPhone::-webkit-input-placeholder,
+#contactMessage::-webkit-input-placeholder {
+    color: white !important;
+}
+
+.contact-send-button {
+    width: 70px;
+}
+
+.contact-button {
+    border: none;
+    background-color: white;
+}
+
+.contact-button:active {
+    border: none;
+    background-color: white;
+}
+
+label a:link {
+    text-decoration: none;
+    color: grey;
+}
+
+.loading {
+    background-color: transparent !important;
+}
+

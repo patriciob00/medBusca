@@ -1,0 +1,26 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Atendimento</h1>
+        <!--<div class="buttons">-->
+            <!--<button class="button" ng-click="closeAttendances()">OK</button>-->
+        <!--</div>-->
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-radio">
+                <input type="radio" ng-value="1" ng-model="filterArgs.attendance" ng-click="closeAttendances()">
+                <div class="item-content">
+                    Particular
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+            <label class="item item-radio">
+                <input type="radio" ng-value="2" ng-model="filterArgs.attendance" ng-click="closeAttendances()">
+                <div class="item-content">
+                    Convênio
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="EncontreMed" cache-view="false" class="main-background">
+    <ion-content>
+        <ion-slide-box ng-if="banners" id="banner-slide-box" active-slide="activeSlider" auto-play="true" on-slide-changed="slideHasChanged($index)">
+            <ion-slide align="center" ng-repeat="banner in banners" ng-click="openWebView(banner)" style="height: 240px">
+                <img ng-src="{{banner.image}}" style="height: 100%; width: 420px; background-position: center center;
+                                                background-repeat: no-repeat; overflow: hidden;" />
+            </ion-slide>
+        </ion-slide-box>
+         <div class="main">
+
+
+    
+
+
+  </div>
+        <div class="list">
+            <a class="item item-avatar item-icon-right category-list-item" ng-repeat="category in categories" href="#/app/filter/{{category.id}}">
+                <img ng-src="{{category.icon}}">
+                <div class="category-list-item-name">
+                    <em class="">{{category.name}}</em>
+                </div>
+                <i class="icon"><img class="category-list-item-arrow-right" src="img/SetaDirCell@2x.png"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

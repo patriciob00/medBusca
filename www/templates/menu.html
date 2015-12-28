@@ -1,0 +1,69 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar bar-dwguiabase">
+            <ion-nav-back-button>
+                Voltar
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-dark ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu style="background-image: url('img/BackgroundAzul@2x.png');" side="left">
+        <ion-content>
+            <ion-list>
+                <div class="sidemenu-padding-top"></div>
+                <ion-item class="item sidemenu-item" menu-close href="#/app/main">
+                    <div class="sidemenu-item-img" style="margin-right: 16px">
+                        <img src="img/IconHome@2x.png" style="width:30px;">
+                    </div>
+                    <div class="sidemenu-item-title">
+                        Início
+                    </div>
+                </ion-item>
+                <ion-item class="item sidemenu-item" menu-close href="#/app/contact">
+                    <div class="sidemenu-item-img" style="margin-right: 16px">
+                        <img src="img/IconContato@2x.png" style="width:30px;">
+                    </div>
+                    <div class="sidemenu-item-title">
+                        Contato
+                    </div>
+                </ion-item>
+                <ion-item class="item sidemenu-item" menu-close href="#/app/favorites">
+                    <div class="sidemenu-item-img" style="margin-right: 16px">
+                        <img src="img/IconFavoritoMenu@3x.png" style="width:30px;">
+                    </div>
+                    <div class="sidemenu-item-title">
+                        Favoritos
+                    </div>
+                </ion-item>
+                <ion-item class="item sidemenu-item" menu-close ng-click="openFacebook()">
+                    <div class="sidemenu-item-img">
+                        <img src="img/IconFB@2x.png" style="width:30px;">
+                    </div>
+                    <div class="sidemenu-item-title">
+                        Facebook
+                    </div>
+                </ion-item>
+                <ion-item class="item sidemenu-item" menu-close ng-click="openInstagram()">
+                    <div class="sidemenu-item-img">
+                        <img src="img/IconInsta@2x.png" style="width:30px;">
+                    </div>
+                    <div class="sidemenu-item-title">
+                        Instagram
+                    </div>
+                </ion-item>
+                <ion-item class="item sidemenu-item" menu-close ng-click="openTermos()">
+                    <div class="sidemenu-item-img">
+                        <img src="img/IconTermos@2x.png" style="width:30px;">
+                    </div>
+                    <div class="sidemenu-item-title">
+                        Termos de uso
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

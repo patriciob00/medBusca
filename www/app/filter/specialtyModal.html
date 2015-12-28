@@ -1,0 +1,23 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Especialidade</h1>
+        <!--<div class="buttons">-->
+            <!--<button class="button" ng-click="closeSpecialty()">OK</button>-->
+        <!--</div>-->
+    </ion-header-bar>
+    <ion-content>
+
+        <ion-list>
+            <ion-item ng-repeat="specialty in specialties">
+                <label class="item-radio">
+                    <input type="radio" ng-value="specialty.id" ng-model="filterArgs.specialty"
+                           ng-click="closeSpecialty()">
+                    <div>
+                        {{specialty.name}}
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

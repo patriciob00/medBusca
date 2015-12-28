@@ -1,0 +1,121 @@
+<ion-view cache-view="false" class="entity-details-background">
+    <ion-nav-title>{{entity.name}}</ion-nav-title>
+    <!--<ion-nav-buttons side="right">-->
+    <!--<button ng-class="{'button button-icon ion-ios-star-outline' : isFav==1,-->
+    <!--'button button-icon ion-star custom-icon' : isFav==0}" ng-click="markAs(!setFav)"></button>-->
+    <!--</ion-nav-buttons>-->
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-ios-upload-outline custom-share-button" ng-click="shareEntity()" ng-if="isIOS()"></button>
+        <button class="button button-icon button-clear ion-android-share-alt custom-share-button" ng-click="shareEntity()" ng-if="isAndroid()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div id="map-canvas">
+            <ui-gmap-google-map styles="map.styles" center='map.center' zoom='map.zoom' draggable="true">
+                <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+        <div style="padding-left: 10px" class="row entity-details-address">
+            <div class="col col-10" style="position: relative">
+                <img class="entity-details-address-pin" src="img/IconPin@2x.png">
+            </div>
+            <div class="col col-75">
+                <label ng-if="entity.street !== ''">
+                    <span class="entity-details-address-name">{{entity.street}}</span>
+                    <br>
+                </label>
+                <label ng-if="entity.neighborhood !== ''">
+                    <span class="entity-details-address-name">{{entity.neighborhood}}</span>
+                    <br>
+                </label>
+                <label ng-if="entity.city !== ''">
+                    <span class="entity-details-address-name">{{entity.city.name}}</span>
+                    <br>
+                </label>
+                <label ng-if="entity.cep !== ''">
+                    <span class="entity-details-address-name">{{entity.cep}}</span>
+                </label>
+            </div>
+            <div class="col" style="position: relative">
+                <button ng-click="openMaps()" class="button button-clear entity-details-button-navigate">
+                    <img class="entity-details-button-navigate-image" src="img/IconLocalizacao@2x.png">
+                </button>
+            </div>
+        </div>
+        <!--         <div align="center" class="padding">
+            <button class="button button-clear" ng-click="showEntityDetails()">
+                <img class="entity-details-button-show-more-image" src="img/ExibirMais@2x.png">
+            </button>
+            <span class="entity-details-show-more">{{showDetails}}</span>
+        </div> -->
+        <div id="entity-details">
+            <!-- ng-show="EntityDetails" -->
+            <div ng-if="entity.description !== ''" class="row padding">
+                <label class="col padding">
+                    <span class="entity-details-font">{{entity.description}}</span>
+                </label>
+            </div>
+            <div ng-if="entity.status1 !== ''" class="row padding">
+                <label class="col padding">
+                    <span class="entity-details-font">{{entity.status1}}</span>
+                </label>
+            </div>
+            <div ng-if="entity.status2 !== ''" class="row padding">
+                <label class="col padding">
+                    <span class="entity-details-font">{{entity.status2}}</span>
+                </label>
+            </div>
+            <div ng-if="entity.email !== ''" class="row padding" ng-click="openEmail()">
+                <div align="center" class="col col-10" style="position: relative">
+                    <img class="entity-details-icons" src="img/IconSafari Copy@2x.png">
+                </div>
+                <label class="col">
+                    <span class="entity-details-font">{{entity.email}}</span>
+                </label>
+            </div>
+            <div ng-if="entity.website !== ''" class="row padding" ng-click="openWebsite()">
+                <div align="center" class="col col-10" style="position: relative">
+                    <img class="entity-details-icons" src="img/IconSafari@2x.png">
+                </div>
+                <label class="col">
+                    <span class="entity-details-font">{{entity.website}}</span>
+                </label>
+            </div>
+            <div ng-if="!entity.phone1 == '' || !entity.phone2 == ''" class="row padding">
+                <div class="col col-10" style="position: relative">
+                    <img class="entity-details-icon-blue-phone" src="img/IconTelefoneAzul@2x.png">
+                </div>
+                <div class="col col-75">
+                    <label ng-if="entity.phone1 !== ''">
+                        <span class="entity-details-font">{{entity.phone1}}</span>
+                    </label>
+                </div>
+                <div class="col" style="position: relative">
+                    <button ng-click="openDialup(entity.phone1)" class="button button-clear entity-details-button-phone">
+                        <img class="entity-details-icons" src="img/IconTelefone@2x.png">
+                    </button>
+                </div>
+            </div>
+            <div ng-if="!entity.phone2 == '' || !entity.phone2 == ''" class="row padding">
+                <div class="col col-10" style="position: relative">
+                    <img class="entity-details-icon-blue-phone" src="img/IconTelefoneAzul@2x.png">
+                </div>
+                <div class="col col-75">
+                    <label ng-if="entity.phone2 !== ''">
+                        <span class="entity-details-font">{{entity.phone2}}</span>
+                    </label>
+                </div>
+                <div class="col" style="position: relative">
+                    <button ng-click="openDialup(entity.phone2)" class="button button-clear entity-details-button-phone">
+                        <img class="entity-details-icons" src="img/IconTelefone@2x.png">
+                    </button>
+                </div>
+            </div>
+            <div class="row padding">
+                <button ng-class="{'button button-block filter-done-button-red': !isFav,'button button-block filter-done-button': isFav}" ng-click="markAs(!setFav)">
+                    {{favoriteText}}
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<ion-view view-title="Favoritos" cache-view="false">
+    <ion-content>
+        <div class="no-favorites" ng-show="entities.length == 0 || entities.length == null">{{"Você não adicionou nenhum favorito ainda."}}</div>
+        <div class="list">
+            <a class="item item-avatar item-icon-right entity-list-item"  ng-repeat="obj in entities" href="#/app/entity/{{obj.entity.id}}">
+                <img ng-src="{{obj.entity.photo}}">
+                <div class="entity-list-item-name">
+                    <em class="">{{obj.entity.name}}</em>
+                </div>
+                <p class="entity-list-item-status">{{obj.entity.status1}}</p>
+                <i class="icon"><img class="entity-list-item-arrow-right" src="img/SetaDirCell@2x.png"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

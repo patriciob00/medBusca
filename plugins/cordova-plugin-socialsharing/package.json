@@ -1,0 +1,48 @@
+{
+  "name": "cordova-plugin-socialsharing",
+  "version": "4.3.81",
+  "description": "Cordova Plugin SocialSharing",
+  "cordova": {
+    "id": "cordova-plugin-socialsharing",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8",
+    "cordova",
+	"phonegap",
+	"phonegap build",
+    "SocialSharing",
+	"EddyVerbruggen",
+	"Social Sharing",
+	"Twitter",
+	"Facebook",
+	"Email",
+	"SMS",
+	"WhatsApp"
+  ],
+  "author": {
+    "name": "Eddy Verbruggen"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/issues"
+  },
+  "homepage": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/blob/ac66d5d/README.md",
+  "maintainers": [
+    {
+      "name": "appsystem",
+      "email": "appsystemstaff@gmail.com"
+    }
+  ]
+}

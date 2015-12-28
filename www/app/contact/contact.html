@@ -1,0 +1,46 @@
+<ion-view view-title="Contato">
+    <ion-content>
+        <form name="contactForm" ng-submit="sendContact(contactData)">
+            <div class="padding">
+                <label class="item contact-text">
+                    <div align="center">Deseja falar algo para nós? Sugestões,
+                        críticas, reportar bugs, etc., serão bem vindas.</div>
+                </label>
+                <div class="padding">
+                    <label class="item item-input item-contact-input">
+                        <input class="item-contact-input-text" required type="text" id="contactName"
+                               ng-model="contactData.name" placeholder="Nome"
+                               ng-enter="setFocus('contactEmail')">
+                    </label>
+                </div>
+                <div class="padding">
+                    <label class="item item-input item-contact-input">
+                        <input class="item-contact-input-text" required type="text" id="contactEmail"
+                               ng-model="contactData.email" placeholder="E-mail"
+                               ng-enter="setFocus('contactPhone1')">
+                    </label>
+                </div>
+                <div class="padding">
+                <label class="item item-input item-contact-input">
+                    <input class="item-contact-input-text" required type="text" id="contactPhone"
+                           ng-model="contactData.phone" placeholder="Telefone"
+                           ng-enter="setFocus('contactMessage')" ui-br-phone-number>
+                </label>
+                </div>
+                <div class="padding">
+                    <label class="item item-input item-contact-input">
+                    <textarea rows="5" id="contactMessage" name="contactMessage" class="item-contact-input-textarea"
+                              ng-model="contactData.message" placeholder="Mensagem..."
+                              ng-enter="setFocus('button')" required></textarea>
+                    </label>
+                </div>
+                <div align="center" class="padding" style="height: 100px">
+                    <button id="button" class="button contact-button" type="submit"
+                            ng-disabled="contactForm.$invalid">
+                        <img class="contact-send-button" src="img/BtnOK@2x.png">
+                    </button>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+€<div class="modal">
+  <ion-header-bar class="barraTitulo-dw">
+    <h1 class="title">Escolha uma opção</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closehowToGet()" style="padding-right: 5px;color: #000000">x</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div nav-clear class="list" style="margin-bottom: 0px">
+      <a class="item" ng-click="closehowToGet();openMapWebsite('waze://?ll={{entity.latitude}},{{entity.longitude}}&navigate=yes')" style="background-color: transparent">
+        Waze
+      </a>
+      <a class="item" ng-click="closehowToGet();openMapWebsite('https://maps.google.com.br/maps?daddr={{entity.latitude}},{{entity.longitude}}&zoom=14&views=traffic')" style="background-color: transparent">
+        Google Maps
+      </a>
+      <a class="item" ng-click="closehowToGet();openMapWebsite('http://maps.apple.com/?daddr={{entity.latitude}},{{entity.longitude}}&z=14')" style="background-color: transparent">
+        Maps
+      </a>
+    </div>
+  </ion-content>
+</div>
+
