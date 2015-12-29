@@ -1,6 +1,6 @@
 angular.module('dwguiabase.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout,) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
     $scope.openInstagram = function() {
         window.open("https://instagram.com/encontremed", '_system');
     };
